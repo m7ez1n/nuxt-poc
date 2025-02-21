@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Rethink Sans";
+
+    --background: 0 0% 98%; /* #F9F9F9 */
+    --foreground: 354 51% 18%; /* #44151A */
+
+    --card: 0 0% 98%; /* #F9F9F9 */
+    --card-foreground: 354 51% 18%; /* #44151A */
+
+    --popover: 0 0% 98%; /* #F9F9F9 */
+    --popover-foreground: 354 51% 18%; /* #44151A */
+
+    --primary: 354 51% 28%; /* #70242B */
+    --primary-foreground: 36 25% 80%; /* #D8CFC1 */
+
+    --secondary: 0 0% 90%; /* #E5E5E5 */
+    --secondary-foreground: 354 51% 18%; /* #44151A */
+
+    --muted: 0 0% 74%; /* #BDBDBD */
+    --muted-foreground: 0 0% 51%; /* #828282 */
+
+    --accent: 36 25% 80%; /* #D8CFC1 */
+    --accent-foreground: 354 51% 18%; /* #44151A */
+
+    --destructive: 0 91% 46%; /* #E90016 */
+    --destructive-foreground: 0 0% 98%; /* #F9F9F9 */
+
+    --border: 36 25% 80%; /* #D8CFC1 */
+    --input: 36 25% 80%; /* #D8CFC1 */
+    --ring: 31 80% 36%; /* #AE780A */
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 354 51% 18%; /* #44151A */
+    --foreground: 0 0% 98%; /* #F9F9F9 */
+
+    --card: 354 51% 18%; /* #44151A */
+    --card-foreground: 0 0% 98%; /* #F9F9F9 */
+
+    --popover: 354 51% 18%; /* #44151A */
+    --popover-foreground: 0 0% 98%; /* #F9F9F9 */
+
+    --primary: 36 25% 80%; /* #D8CFC1 */
+    --primary-foreground: 354 51% 18%; /* #44151A */
+
+    --secondary: 354 51% 28%; /* #70242B */
+    --secondary-foreground: 0 0% 98%; /* #F9F9F9 */
+
+    --muted: 354 51% 28%; /* #70242B */
+    --muted-foreground: 0 0% 74%; /* #BDBDBD */
+
+    --accent: 31 80% 36%; /* #AE780A */
+    --accent-foreground: 0 0% 98%; /* #F9F9F9 */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%; /* #F9F9F9 */
+
+    --border: 354 51% 28%; /* #70242B */
+    --input: 354 51% 28%; /* #70242B */
+    --ring: 31 80% 36%; /* #AE780A */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer utilities {
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute inline-flex items-center justify-center font-mono text-base font-medium text-center border-4 rounded-full w-9 h-9 bg-muted -indent-px border-background;
+    @apply -ml-[50px] -mt-1;
+    content: counter(step);
+  }
+}
+
+@layer components {
+  *,
+  ::before,
+  ::after {
+    --tw-ring-color: theme("colors.foreground/0.25");
+    @apply border-neutral-300;
+  }
+}
+
+html {
+  @apply antialiased;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
