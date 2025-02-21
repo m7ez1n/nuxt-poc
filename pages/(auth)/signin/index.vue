@@ -7,26 +7,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import {
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { useAuthCookie } from "@/utils/auth";
-import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
+import { useForm } from "vee-validate";
 import { loginSchema } from "./schemas";
-import IconLogo from "@/public/logo.svg";
 </script>
 
 <script setup lang="ts">
 definePageMeta({
   middleware: "auth",
-  layout: "auth",
 });
 
 useHead({
@@ -61,7 +58,7 @@ const onSubmit = form.handleSubmit(async (values) => {
           class="flex items-center justify-center gap-2 text-2xl font-extrabold text-center"
         >
           Bem-vindo ao Banco Pine
-          <IconLogo class="w-10 h-10" />
+          <img src="/logo.svg" alt="Logo" class="w-8 h-8" />
         </CardTitle>
         <CardDescription class="text-center">
           Digite seu e-mail para acessar sua conta

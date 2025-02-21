@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/components/ui/button";
+import { LogOutIcon } from "lucide-vue-next";
 
 const router = useRouter();
 const { removeAuthCookie } = useAuthCookie();
@@ -23,7 +24,7 @@ const handleLogout = () => {
           <span class="sr-only">Sair</span>
           <span class="flex items-center gap-2">
             Sair
-            <IconLogo class="w-8 h-8" />
+            <LogOutIcon class="w-8 h-8" />
           </span>
         </Button>
       </div>
