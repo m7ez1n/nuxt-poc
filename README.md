@@ -1,49 +1,80 @@
-# shadcn-docs-nuxt Minimal Starter
+# Pine Dashboard
 
-Starter template for [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt).
+A study project exploring modern web development with Nuxt.js and shadcn-ui. Built as a fruit catalog system with detailed nutritional information to demonstrate authentication, dynamic routing.
 
-## Setup
+<table>
+  <tr>
+    <td width="50%"><img src="./.github/sign-in.png" alt="Pine Sign In" /></td>
+    <td width="50%"><img src="./.github/dashboard.png" alt="Pine Dashboard" /></td>
+  </tr>
+</table>
 
-Make sure to install the dependencies:
+## 🚀 Features
+
+- 🔐 Authentication system with email validation
+- 📱 Responsive design for all devices
+- 📊 Detailed nutritional information display
+- 🎨 Modern UI with shadcn components
+- 🔄 Real-time data updates
+
+## 🛠 Setup
+
+1. Clone the repository:
 
 ```bash
-# yarn
-yarn install
+git clone https://github.com/m7ez1n/nuxt-poc
+```
 
+2. Install dependencies:
+
+```bash
 # npm
 npm install
 
 # pnpm
 pnpm install
 
-# bun
+# yarn
+yarn install
+
+# bun (recommended)
 bun install
 ```
 
-## Development Server
-
-Start the development server on http://localhost:3000
+3. Start development server:
 
 ```bash
-npm run dev
+bun dev
 ```
 
-## Production
+The application will be available at `http://localhost:3000`
 
-[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=ZTL-UwU/shadcn-docs-nuxt-starter)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FZTL-UwU%2Fshadcn-docs-nuxt-starter)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2FZTL-UwU%2Fshadcn-docs-nuxt-starter)
-
-Build the application for production:
+## 🏗 Build
 
 ```bash
-npm run build
+# Build for production
+bun build
+
+# Preview production build
+bun preview
 ```
 
-Locally preview production build:
+## 🔧 Technologies
 
-```bash
-npm run preview
-```
+- **Framework**: [Nuxt.js 3](https://nuxt.com/) - Vue.js Framework
+- **UI Components**: [shadcn-nuxt](https://www.shadcn-vue.com/) - Unstyled UI components
+- **Styling**:
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate)
+- **Form Handling**:
+  - [vee-validate](https://vee-validate.logaretm.com/)
+  - [zod](https://github.com/colinhacks/zod)
+- **Icons**: [lucide-vue-next](https://lucide.dev/)
+- **Utilities**:
+  - [@vueuse/core](https://vueuse.org/)
+  - [class-variance-authority](https://cva.style/)
+  - [clsx](https://github.com/lukeed/clsx)
 
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 📝 License
+
+MIT
