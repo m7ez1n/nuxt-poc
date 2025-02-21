@@ -19,7 +19,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "Dashboard - Banco Pine",
+  title: "Dashboard - Pine",
 });
 
 const {

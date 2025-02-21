@@ -17,7 +17,7 @@ const handleLogout = () => {
       <div class="container flex items-center justify-between h-16 px-4">
         <NuxtLink to="/" class="flex items-center space-x-2">
           <img src="/logo.svg" alt="Logo" class="w-8 h-8" />
-          <span class="font-semibold">Banco Pine</span>
+          <span class="font-semibold">Pine</span>
         </NuxtLink>
 
         <Button variant="ghost" size="sm" @click="handleLogout">

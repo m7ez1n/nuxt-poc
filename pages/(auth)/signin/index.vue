@@ -27,7 +27,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "Entrar - Banco Pine",
+  title: "Entrar - Pine",
 });
 
 const router = useRouter();
@@ -57,7 +57,7 @@ const onSubmit = form.handleSubmit(async (values) => {
         <CardTitle
           class="flex items-center justify-center gap-2 text-2xl font-extrabold text-center"
         >
-          Bem-vindo ao Banco Pine
+          Bem-vindo ao Pine
           <img src="/logo.svg" alt="Logo" class="w-8 h-8" />
         </CardTitle>
         <CardDescription class="text-center">
