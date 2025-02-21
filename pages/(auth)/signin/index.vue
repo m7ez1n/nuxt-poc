@@ -17,13 +17,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useAuthCookie } from "@/utils/auth";
-</script>
-
-<script setup lang="ts">
 import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import { loginSchema } from "./schemas";
+import IconLogo from "@/public/logo.svg";
+</script>
 
+<script setup lang="ts">
 definePageMeta({
   middleware: "auth",
   layout: "auth",
@@ -57,9 +57,12 @@ const onSubmit = form.handleSubmit(async (values) => {
   >
     <Card class="w-full max-w-md">
       <CardHeader>
-        <CardTitle class="text-3xl font-extrabold text-center"
-          >Bem-vindo ao Banco Pine</CardTitle
+        <CardTitle
+          class="flex items-center justify-center gap-2 text-2xl font-extrabold text-center"
         >
+          Bem-vindo ao Banco Pine
+          <IconLogo class="w-10 h-10" />
+        </CardTitle>
         <CardDescription class="text-center">
           Digite seu e-mail para acessar sua conta
         </CardDescription>
