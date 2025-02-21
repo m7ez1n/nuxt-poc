@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
   CardDescription,
   CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 </script>
 
@@ -26,8 +26,8 @@ const {
   data: fruits,
   error,
   refresh: reload,
-  pending: isLoading,
-} = useLazyFetch<Fruit[]>("/api/fruit/all", {
+  status,
+} = useFetch<Fruit[]>("/api/fruit/all", {
   key: "fruits-list",
 });
 </script>
@@ -36,7 +36,7 @@ const {
   <div class="container py-8">
     <h1 class="mb-6 text-3xl font-bold">Catálogo de Frutas</h1>
 
-    <div v-if="isLoading" class="flex justify-center my-12">
+    <div v-if="status === 'pending'" class="flex justify-center my-12">
       <div
         class="w-12 h-12 border-b-2 rounded-full animate-spin border-primary"
       ></div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead } from "#imports";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,10 +8,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useRoute, useRouter } from "vue-router";
-import { useLazyAsyncData } from "#imports";
 import { computed } from "vue";
-import { useHead } from "#imports";
+import { useRoute, useRouter } from "vue-router";
+import type { Fruit } from "~/types/fruits";
 
 definePageMeta({
   middleware: "auth",
@@ -28,15 +28,12 @@ const {
   data: fruit,
   error,
   refresh: reload,
-  pending: isLoading,
   status,
-} = useLazyAsyncData(`fruit-${fruitName}`, () =>
-  $fetch(`/api/fruit/${fruitName}`, {
-    headers: {
-      Accept: "application/json",
-    },
-  })
-);
+} = useFetch<Fruit>(`/api/fruit/${fruitName}`, {
+  headers: {
+    Accept: "application/json",
+  },
+});
 
 const isFetching = computed(() => status.value === "pending");
 
@@ -51,7 +48,7 @@ function goBack() {
       ← Voltar para lista
     </Button>
 
-    <div v-if="isLoading || isFetching" class="flex justify-center my-12">
+    <div v-if="status === 'pending'" class="flex justify-center my-12">
       <div
         class="w-12 h-12 border-b-2 rounded-full animate-spin border-primary"
       ></div>
